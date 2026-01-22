@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class CreateContactTest {
 	
-	@Test
+	@Test(groups = "SmokeTest")
 	public void CreateContact() {
 	
 	String BROWSER = System.getProperty("browser");
@@ -38,7 +38,7 @@ public class CreateContactTest {
 		System.out.println(PWD);
 	}
 
-	@Test
+	@Test (groups = "RegressionTest")
 	public void CreateContactWithPhoneNo() {
 		System.out.println("Create contact with phone number");
 	}

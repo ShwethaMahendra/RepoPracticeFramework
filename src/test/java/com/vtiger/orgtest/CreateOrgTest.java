@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class CreateOrgTest {
 	
-	@Test
+	@Test (groups = {"SmokeTest", "RegressionTest"})
 	public void LoginToApp() {
 		
 		String BROWSER = System.getProperty("browser");
@@ -18,7 +18,7 @@ public class CreateOrgTest {
 		String USERNAME = System.getProperty("username");
 		String PWD = System.getProperty("password");
 		
-		WebDriver driver= null;
+		WebDriver driver=null;
 		if(BROWSER.equals("chrome"))
 			driver= new ChromeDriver();
 		if(BROWSER.equals("firefox"))
@@ -36,7 +36,7 @@ public class CreateOrgTest {
 		System.out.println(PWD);
 	}
 	
-	@Test
+	@Test(groups = "RegressionTest")
 	public void CreateOrgWithName() {
 		
 		System.out.println("CreateOrgTest");
